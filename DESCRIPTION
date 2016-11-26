@@ -1,9 +1,13 @@
 Package: SuperFarmerMAPA
-Title: What the Package Does (one line, title case)
+Title: Strategie do gry w Super Farmera
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.3.1)
+Authors@R: person("Agnieszka", "Ciepielewska", email ="aaa@aaa.pl", role = c("aut", "cre"))
+Authots@R: person("Marek, "Wawreniuk", email ="aaa@aaa.pl", role = c("aut",
+    "cre"))
+Description: TODO
+Depends:
+    R (>= 3.3.1)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 5.0.1
