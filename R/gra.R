@@ -6,6 +6,23 @@ names(stock_status) <- animals
 max_stock <- c(60, 24, 20, 12, 6, 4, 2)
 names(max_stock) <- animals
 
+#' @title Jedna gra w Super Farmera
+#' 
+#' @description 
+#' Funkcja \code{gra()} rozgrywa jedna gre w Super Farmera przy zadanej strategii i zwraca liczbe tur, 
+#' ktora byla potrzebna, aby gracz wygral. Wykorzystuje funkcje: \code{reproduction()} i \code{win()}
+#' 
+#' @param strategia Strategia, ktora ma byc wykorzystywana do grania
+#' 
+#' @return Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
+#' 
+#' @examples 
+#' wynik <- gra(strategia)
+#' 
+#' @rdname gra
+#' 
+#' @author Agnieszka Ciepielewska
+#'
 #' @export
 
 gra <- function(strategia){
