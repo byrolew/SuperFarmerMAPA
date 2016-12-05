@@ -26,9 +26,7 @@ strategia_rf <- function(stock_status){
     which_move <- sample(which(pred == min(pred)), 1)
     #Jako, ?e czasami wyst?puj? dwa ruchy o tej samej predykcji, to bierzemy losowy z nich
     move <- possible_moves[which_move, ]
-    cat("stock", stock_status[c(7,5,4,2,1,6,3)], "\n")
     stock_status <- stock_status + move
-    cat("move", move[c(7,5,4,2,1,6,3)], "\n")
   }
   stock_status <- stock_status[c(7,5,4,2,1,6,3)]
   return(stock_status)
