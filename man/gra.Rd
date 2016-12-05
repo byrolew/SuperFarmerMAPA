@@ -14,12 +14,10 @@ Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
 }
 \description{
 Funkcja \code{gra()} rozgrywa jedna gre w Super Farmera przy zadanej strategii i zwraca liczbe tur, 
-ktora byla potrzebna, aby gracz wygral
+ktora byla potrzebna, aby gracz wygral. Wykorzystuje funkcje: \code{reproduction()} i \code{win()}
 }
 \examples{
-\dontrun{
 wynik <- gra(strategia)
-}
 
 }
 \author{

@@ -1,12 +1,14 @@
 Package: SuperFarmerMAPA
 Title: Strategie do gry w Super Farmera
 Version: 0.0.0.9000
-Authors@R: person("Agnieszka", "Ciepielewska", email ="aaa@aaa.pl", role = c("aut", "cre"))
-Authots@R: person("Marek, "Wawreniuk", email ="aaa@aaa.pl", role = c("aut",
-    "cre"))
+Authors@R: c(
+    person("Agnieszka", "Ciepielewska", email ="aaa@aaa.pl", role = c("aut")),
+    person("Marek", "Wawreniuk", email ="aaa@aaa.pl", role = c("cre")))
 Description: TODO
 Depends:
     R (>= 3.3.1)
+Imports:
+  randomForest
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

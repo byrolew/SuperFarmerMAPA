@@ -2,3 +2,4 @@
 
 export(badaj_gre)
 export(gra)
+export(strategia_rf)
