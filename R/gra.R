@@ -6,7 +6,7 @@
 #' 
 #' @param strategia Strategia, ktora ma byc wykorzystywana do grania
 #' 
-#' @return Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
+#' @return turns Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
 #' 
 #' @examples 
 #' wynik <- gra(strategia)

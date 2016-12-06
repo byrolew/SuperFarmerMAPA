@@ -16,7 +16,7 @@ reproduction(die1_result, die2_result, stock_status, max_stock)
 \item{max_stock}{Wektor maksymalnej liczby zwierzat w stadzie}
 }
 \value{
-Funkcja zwraca stan stada gracza po rozpatrzeniu rzutow kostkami
+stock_status Stan stada gracza po rozpatrzeniu rzutow kostkami
 }
 \description{
 Funkcja przeprowadzajaca zmiany w stadzie gracza po rzucie kostkami, 

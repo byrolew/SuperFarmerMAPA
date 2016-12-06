@@ -1,12 +1,33 @@
+#' @title Generowanie mozliwych rochow
+#' 
+#' @description 
+#' Funkcja \code{moves_generation()} wszytkie mozliwe ruchy gracza przy danym stadzie.
+#' Wykorzystuje funkcje \code{generate_change_lists()}
+#' 
+#' @param stock_status Aktualny stan stada gracza
+#' 
+#' @return possible_moves Macierz wszystkich mozliwych ruchow
+#' 
+#' @examples 
+#' stan_stada <- c(2,4,1,0,0,0,0)
+#' stan_stada <- moves_generation(stan_stada)
+#' 
+#' @rdname moves_generation
+#' 
+#' @author Agnieszka Ciepielewska
+
 moves_generation <- function(stock_status){
   max_stock <- c(6, 12, 2, 20, 24, 4, 60)
   prices_sorted <- c(72, 36, 36, 12, 6, 6, 1)
   animals <- c("kon", "krowa", "duzy_pies", "swinia", "owca", "maly_pies", "krolik")
   names(prices_sorted) <- animals
+  #chcemy wytworzych listy wymian tylko raz, bo to troche zajmuje
   if(!exists("to_big_animal") && !exists("to_small_animals")){
-    env <- new.env()
-    assign("to_big_animal", generate_change_lists(prices_sorted)[[1]], envir = parent.env(parent.env(env)))
-    assign("to_small_animals", generate_change_lists(prices_sorted)[[2]], envir = parent.env(parent.env(env)))
+    to_big_animal <<- generate_change_lists(prices_sorted)[[1]]
+    to_small_animals <<- generate_change_lists(prices_sorted)[[2]]
+    #env <- new.env()
+    #assign("to_big_animal", generate_change_lists(prices_sorted)[[1]], envir = parent.env(parent.env(env)))
+    #assign("to_small_animals", generate_change_lists(prices_sorted)[[2]], envir = parent.env(parent.env(env)))
   }
   n_rabbits <- sum(stock_status * prices_sorted)
   possible_moves <- c()

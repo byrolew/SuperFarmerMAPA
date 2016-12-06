@@ -10,7 +10,7 @@ gra(strategia)
 \item{strategia}{Strategia, ktora ma byc wykorzystywana do grania}
 }
 \value{
-Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
+turns Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
 }
 \description{
 Funkcja \code{gra()} rozgrywa jedna gre w Super Farmera przy zadanej strategii i zwraca liczbe tur, 

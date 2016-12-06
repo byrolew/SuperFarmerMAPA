@@ -8,7 +8,7 @@
 #' @param stock_status Wektor posiadanych przez gracza zwierzat
 #' @param max_stock Wektor maksymalnej liczby zwierzat w stadzie
 #' 
-#' @return Funkcja zwraca stan stada gracza po rozpatrzeniu rzutow kostkami
+#' @return stock_status Stan stada gracza po rozpatrzeniu rzutow kostkami
 #' 
 #' @examples 
 #' stock_status <- reproduction(die1_result="krowa", die2_result="krolik", stock_status=c(0,1,0,2,0,0,0), 

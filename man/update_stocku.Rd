@@ -16,7 +16,7 @@ update_stocku(stock_status, max_stock, die1_result = "", die2_result = "")
 \item{die2_result}{String, bedacy wynikiem rzutu druga kostka (tej z lisem), domyslnie pusty string}
 }
 \value{
-Funkcja zwraca zaktualizowany stan stada gracza
+stock_status Zaktualizowany stan stada gracza
 }
 \description{
 Funkcja pomocnicza wykorzystywana przez funkcje \code{reproduction()} do aktualizowania stanu stada gracza
