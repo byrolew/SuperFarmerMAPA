@@ -4,6 +4,8 @@
 #'  oczekiwana liczona w krolikach jest najwieksza. Funkcja \code{moves_generation()} 
 #'  generuje wszystkie mozliwe ruchy. Funkcja \code{get_the_best_state} zwraca ruch o 
 #'  największej 
+#'  
+#' @export
 strategy_EV <- function (stock_status) {
   animals_in_necessary_order <- c("kon", "krowa", "duzy_pies", "swinia", "owca", "maly_pies", "krolik")
   stock_status <- stock_status[animals_in_necessary_order]
