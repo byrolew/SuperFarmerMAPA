@@ -3,3 +3,5 @@
 export(badaj_gre)
 export(gra)
 export(strategia_rf)
+export(strategy_EV)
+export(strategy_HEV)
