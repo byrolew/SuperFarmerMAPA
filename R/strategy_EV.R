@@ -13,6 +13,6 @@ strategy_EV <- function (stock_status) {
   possible_states <- t(t(possible_moves) + stock_status)
   colnames(possible_states) <- animals_in_necessary_order
   animals_in_correct_order <- c("krolik", "owca", "swinia", "krowa", "kon", "maly_pies", "duzy_pies")
-  print(get_the_best_state(possible_states)[animals_in_correct_order])
+  #print(get_the_best_state(possible_states)[animals_in_correct_order])
   return (get_the_best_state(possible_states)[animals_in_correct_order])
 }
