@@ -16,7 +16,7 @@
 #' 
 #' @export
 
-badaj_gre <- function(strategia){
-  wyniki <- sapply(1:10000, function(x) gra(strategia))
+badaj_gre <- function(strategia, ile = 1000){
+  wyniki <- sapply(1:ile, function(x) gra(strategia))
   return(summary(wyniki))
 }
