@@ -4,7 +4,8 @@
 \alias{reproduction}
 \title{Rozmnazanie zwierzat po rzucie}
 \usage{
-reproduction(die1_result, die2_result, stock_status, max_stock)
+reproduction(die1_result, die2_result, stock_status, max_stock,
+  zawsze_jeden_krolik, co_zjada_wilk)
 }
 \arguments{
 \item{die1_result}{String, bedacy wynikiem rzutu pierwsza kostka (tej z wilkiem)}
@@ -14,20 +15,27 @@ reproduction(die1_result, die2_result, stock_status, max_stock)
 \item{stock_status}{Wektor posiadanych przez gracza zwierzat}
 
 \item{max_stock}{Wektor maksymalnej liczby zwierzat w stadzie}
+
+\item{zawsze_jeden_krolik}{Wartosc binarna oznaczajaca czy gramy w wersje zasad w ktorej
+zawsze mamy co najmniej jednego krolika}
+
+\item{co_zjada_wilk}{wektor zer i jedynek oznaczajacy czy wilk zjada konkretny rodzaj zwierzecia czy nie
+(duzy pies zawsze powinien dostawac 0, bo jest to rozpatrywane w przypadku gdy nie mamy duzego psa)}
 }
 \value{
 stock_status Stan stada gracza po rozpatrzeniu rzutow kostkami
 }
 \description{
-Funkcja przeprowadzajaca zmiany w stadzie gracza po rzucie kostkami, 
+Funkcja przeprowadzajaca zmiany w stadzie gracza po rzucie kostkami,
 wykorzystuje funkcje \code{update_stocku}
 }
 \examples{
-stock_status <- reproduction(die1_result="krowa", die2_result="krolik", stock_status=c(0,1,0,2,0,0,0), 
-max_stock=c(60,24,20,12,6,2,4))
+stock_status <- reproduction(die1_result="krowa", die2_result="krolik", stock_status=c(0,1,0,2,0,0,0),
+max_stock=c(60,24,20,12,6,2,4), zawsze_jeden_krolik = FALSE,
+co_zjada_wilk = c(1, 1, 0, 1, 1, 0, 0))
 
 }
 \author{
-Agnieszka Ciepielewska
+Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
 }
 

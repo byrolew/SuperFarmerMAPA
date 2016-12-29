@@ -4,10 +4,17 @@
 \alias{strategia_rf}
 \title{Strategia oparta na Random Forest}
 \usage{
-strategia_rf(stock_status)
+strategia_rf(stock_status, wiele_na_wiele = FALSE, max_stock = c(60, 24, 20,
+  12, 6, 4, 2))
 }
 \arguments{
 \item{stock_status}{Stan stada gracza przed ruchem}
+
+\item{wiele_na_wiele}{Zmienna binarna mowiaca czy gramy w wariant gry, pozwalajacy na
+wymienianie wielu zwierzat na wiele innych, domyslnie \code{FALSE}}
+
+\item{max_stock}{Wektor mowiacy ile zwierzat konkretnego typu znajduje sie w calej grze
+domyslnie c(60, 24, 20, 12, 6, 4, 2)}
 }
 \value{
 stock_status Stan stada gracza po ruchu

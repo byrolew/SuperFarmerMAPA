@@ -4,7 +4,8 @@
 \alias{strategy_EV}
 \title{Strategia Expected Value}
 \usage{
-strategy_EV(stock_status)
+strategy_EV(stock_status, max_stock = c(krolik = 60, owca = 24, swinia = 20,
+  krowa = 12, kon = 6, maly_pies = 4, duzy_pies = 2))
 }
 \description{
 Strategia polega na wybraniu ruchu, dla ktorego wartosc

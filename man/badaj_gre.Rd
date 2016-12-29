@@ -4,23 +4,24 @@
 \alias{badaj_gre}
 \title{Badanie gry przy zadanej strategii}
 \usage{
-badaj_gre(strategia, ile = 1000)
+badaj_gre(strategia, ile = 10000)
 }
 \arguments{
 \item{strategia}{Strategia, przy ktorej ma byc badana gra}
+
+\item{ile}{Ile razy fukcja ma zagrac w SuperFarmera przy zadanej strategii, domyslnie 10000}
 }
 \value{
-Funkcja zwraca nastepujace statystyki:
-minimum, 1. kwartyl, mediana, srednia arytmetyczna, 3. kwartyl, maksimum
+Funkcja zwraca wektor liczby ruchów w kolejnych grach.
 }
 \description{
-Funkcja wywolujaca funkcje \code{gra()} 10000 razy przy zadanej strategii i zwracajaca podstawowe statystyki
+Funkcja wywolujaca funkcje \code{gra()} wielokrotnie przy zadanej strategii i zwracajaca wektor wynikow
 }
 \examples{
-wyniki <- badaj_gre(strategia)
+wyniki <- badaj_gre(strategia, 100)
 
 }
 \author{
-Agnieszka Ciepielewska
+Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
 }
 

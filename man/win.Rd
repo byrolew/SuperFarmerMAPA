@@ -4,10 +4,12 @@
 \alias{win}
 \title{Czy gracz wygral}
 \usage{
-win(stock_status)
+win(stock_status, warunek_zwycieztwa)
 }
 \arguments{
 \item{stock_status}{Wektor aktualnego stanu stada gracza}
+
+\item{warunek_zwycieztwa}{Jakie zwierzeta musi miec gracz aby wygrac}
 }
 \value{
 Funkcja zwraca \code{TRUE} jesli gracz spelnia warunki zwyciestwa i \code{FALSE} w przeciwnym przypadku
@@ -16,6 +18,6 @@ Funkcja zwraca \code{TRUE} jesli gracz spelnia warunki zwyciestwa i \code{FALSE}
 Funkcja sprawdzajaca czy w danym momencie gracz ma odpowiednie zwierzeta, aby wygrac
 }
 \author{
-Agnieszka Ciepielewska
+Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
 }
 

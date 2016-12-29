@@ -1,22 +1,22 @@
 #' @title Badanie gry przy zadanej strategii
-#' 
-#' @description Funkcja wywolujaca funkcje \code{gra()} 10000 razy przy zadanej strategii i zwracajaca podstawowe statystyki
-#' 
+#'
+#' @description Funkcja wywolujaca funkcje \code{gra()} wielokrotnie przy zadanej strategii i zwracajaca wektor wynikow
+#'
 #' @param strategia Strategia, przy ktorej ma byc badana gra
-#' 
-#' @return Funkcja zwraca nastepujace statystyki:
-#' minimum, 1. kwartyl, mediana, srednia arytmetyczna, 3. kwartyl, maksimum
-#' 
-#' @examples 
-#' wyniki <- badaj_gre(strategia)
-#' 
+#' @param ile Ile razy fukcja ma zagrac w SuperFarmera przy zadanej strategii, domyslnie 10000
+#'
+#' @return Funkcja zwraca wektor liczby ruchów w kolejnych grach.
+#'
+#' @examples
+#' wyniki <- badaj_gre(strategia, 100)
+#'
 #' @rdname badaj_gre
-#' 
-#' @author Agnieszka Ciepielewska
-#' 
+#'
+#' @author Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
+#'
 #' @export
 
-badaj_gre <- function(strategia, ile = 1000){
+badaj_gre <- function(strategia, ile = 10000){
   wyniki <- sapply(1:ile, function(x) gra(strategia))
-  return(summary(wyniki))
+  return(wyniki)
 }

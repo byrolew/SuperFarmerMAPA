@@ -4,7 +4,7 @@
 \alias{moves_generation}
 \title{Generowanie mozliwych rochow}
 \usage{
-moves_generation(stock_status)
+moves_generation(stock_status, wiele_na_wiele, max_stock)
 }
 \arguments{
 \item{stock_status}{Aktualny stan stada gracza}
@@ -14,7 +14,6 @@ possible_moves Macierz wszystkich mozliwych ruchow
 }
 \description{
 Funkcja \code{moves_generation()} wszytkie mozliwe ruchy gracza przy danym stadzie.
-Wykorzystuje funkcje \code{generate_change_lists()}
 }
 \examples{
 stan_stada <- c(2,4,1,0,0,0,0)
@@ -22,6 +21,6 @@ stan_stada <- moves_generation(stan_stada)
 
 }
 \author{
-Agnieszka Ciepielewska
+Agnieszka Ciepielewska, Mawek Wawreniuk, Pawel Gorniak
 }
 
