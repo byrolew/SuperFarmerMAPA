@@ -1,19 +1,19 @@
 #' @title Generowanie mozliwych rochow
-#' 
-#' @description 
+#'
+#' @description
 #' Funkcja \code{moves_generation()} wszytkie mozliwe ruchy gracza przy danym stadzie.
 #' Wykorzystuje funkcje \code{generate_change_lists()}
-#' 
+#'
 #' @param stock_status Aktualny stan stada gracza
-#' 
+#'
 #' @return possible_moves Macierz wszystkich mozliwych ruchow
-#' 
-#' @examples 
+#'
+#' @examples
 #' stan_stada <- c(2,4,1,0,0,0,0)
 #' stan_stada <- moves_generation(stan_stada)
-#' 
+#'
 #' @rdname moves_generation
-#' 
+#'
 #' @author Agnieszka Ciepielewska
 
 moves_generation <- function(stock_status){
@@ -22,7 +22,7 @@ moves_generation <- function(stock_status){
   animals <- c("kon", "krowa", "duzy_pies", "swinia", "owca", "maly_pies", "krolik")
   names(prices_sorted) <- animals
   #chcemy wytworzych listy wymian tylko raz, bo to troche zajmuje
-  if(!exists("to_big_animal") && !exists("to_small_animals")){
+  if(FALSE){
     to_big_animal <<- generate_change_lists(prices_sorted)[[1]]
     to_small_animals <<- generate_change_lists(prices_sorted)[[2]]
     #env <- new.env()
@@ -38,7 +38,7 @@ moves_generation <- function(stock_status){
   }
   if(!is.null(dim(possible_moves)) && dim(possible_moves)[1] > 0){
     #Sprawdzanie czy mamy wystarczajaco duzo zwierzat w stocku, zeby dokonac wymiany_
-    #Nie znalazlam lepszego sposobu na dodanie stock_status do kazdego wiersza 
+    #Nie znalazlam lepszego sposobu na dodanie stock_status do kazdego wiersza
     #zamiast do kazdej kolumny niz transponowanie macierzy dwukrotnie
     enough_animals <- rowMeans(t(t(possible_moves) + stock_status) >= 0)
     #Wszystkie wymiany, na ktore nie mamy zwierzat sa odrzucane
@@ -53,7 +53,7 @@ moves_generation <- function(stock_status){
   if(!is.null(dim(possible_moves)) && dim(possible_moves)[1] > 0){
     #Sprawdzenie czy ruch jest mozliwy ze wzgledu na liczbe zwierzat w calej grze
     future_states <- t(t(possible_moves) + stock_status)
-    #Sprawdzamy czy srednia wyrazen logicznych w kazdym rzedzie jest rowna 1, 
+    #Sprawdzamy czy srednia wyrazen logicznych w kazdym rzedzie jest rowna 1,
     #bo interesuja nas tylko te ruchy, na ktore starczy wszystkich zwierzat
     possible_states <- rowMeans(t(t(future_states) <= max_stock)) == 1
     #Bierzemy tylko te ruch, ktore sa mozliwe ze wzglegu na maksymalna liczbe zwierzat

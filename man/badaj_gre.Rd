@@ -4,7 +4,7 @@
 \alias{badaj_gre}
 \title{Badanie gry przy zadanej strategii}
 \usage{
-badaj_gre(strategia)
+badaj_gre(strategia, ile = 1000)
 }
 \arguments{
 \item{strategia}{Strategia, przy ktorej ma byc badana gra}

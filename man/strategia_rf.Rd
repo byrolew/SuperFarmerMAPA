@@ -20,7 +20,7 @@ zeby miec z czego wybierac ruch
 \examples{
 stan_stada <- c(2,4,1,0,0,0,0)
 stan_stada <- strategia_rf(stan_stada)
- 
+
 }
 \author{
 Agnieszka Ciepielewska
