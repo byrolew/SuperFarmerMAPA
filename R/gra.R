@@ -6,12 +6,10 @@
 #' Kolejnosc zwierzat we wszystkich wektorach: 1-krolik, 2-owca, 3-swinia, 4-krowa, 5-kon, 6-maly pies, 7-duzy pies
 #'
 #' @param strategia Strategia, ktora ma byc wykorzystywana do grania
-#' @param wiele_na_wiele Zmienna binarna mowiaca czy gramy w wariant gry, pozwalajacy na
-#' wymienianie wielu zwierzat na wiele innych, domyslnie \code{FALSE}
 #' @param zwierzeta_w_pudelku Wektor mowiacy ile zwierzat konkretnego typu znajduje sie w calej grze
 #' - nie nalezy odejmowac zwierzat, ktore chcemy dac jako warunki poczatkowe, domyslnie c(60, 24, 20, 12, 6, 4, 2)
 #' @param warunki_poczatkowe Wektor zwierzat, z ktorymi rozpoczynamy gre, domyslnie c(0, 0, 0, 0, 0, 0, 0)
-#' @param warunek_zwycieztwa Waektor mowiacy ktore zwierzeta i w jakiej ilosci nalezy zdobyc aby wygrac,
+#' @param warunek_zwycieztwa Wektor mowiacy ktore zwierzeta i w jakiej ilosci nalezy zdobyc aby wygrac,
 #' domyslnie c(1, 1, 1, 1, 1, 0, 0)
 #' @param zawsze_jeden_krolik Zmienna binarna mowiaca czy gramy w wariant gry, w ktorym zawsze
 #' posiadamy co najmniej jednego krolika, domyslinie \code{FALSE} (Uwaga: jesli ustawiamy ten parametr na TRUE,
@@ -23,8 +21,8 @@
 #' @return turns Liczba tur, ktora byla potrzebna na wygranie gry przy tej strategii
 #'
 #' @examples
-#' wynik <- gra(strategia, wiele_na_wiele = TRUE, zwierzeta_w_pudelku = c(10, 10, 10, 10, 10, 10, 10),
-#' warunek_zwycieztwa = c(5, 2, 6, 1, 0, 4, 1), zawsze_jeden_krolik = TRUE)
+#' wynik <- gra(strategia_rf, zwierzeta_w_pudelku = c(100, 100, 100, 100, 100, 100, 100),
+#' warunek_zwycieztwa = c(42, 1, 1, 1, 1, 1, 1), zawsze_jeden_krolik = TRUE)
 #'
 #' @rdname gra
 #'
@@ -33,7 +31,6 @@
 #' @export
 
 gra <- function(strategia,
-                wiele_na_wiele = FALSE,
                 zwierzeta_w_pudelku = c(60, 24, 20, 12, 6, 4, 2),
                 warunki_poczatkowe = c(0, 0, 0, 0, 0, 0, 0),
                 warunek_zwycieztwa = c(1, 1, 1, 1, 1, 0, 0),
@@ -61,8 +58,8 @@ gra <- function(strategia,
     if(win(stock_status, warunek_zwycieztwa)){
       return(turns)
     }
-    if(as.character(substitute(strategia)) %in% ls(pos = "package:SuperFarmerMAPA")){
-      stock_status <- strategia(stock_status, wiele_na_wiele = FALSE, max_stock = c(60, 24, 20, 12, 6, 4, 2))
+    if(environmentName(environment(strategia)) == "SuperFarmerMAPA"){
+      stock_status <- strategia(stock_status, max_stock)
     }
     stock_status <- strategia(stock_status)
   }

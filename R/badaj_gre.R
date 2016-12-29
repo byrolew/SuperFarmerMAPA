@@ -8,7 +8,7 @@
 #' @return Funkcja zwraca wektor liczby ruchów w kolejnych grach.
 #'
 #' @examples
-#' wyniki <- badaj_gre(strategia, 100)
+#' wyniki <- badaj_gre(strategia_rf, 10)
 #'
 #' @rdname badaj_gre
 #'

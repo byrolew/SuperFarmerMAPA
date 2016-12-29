@@ -18,7 +18,7 @@ Funkcja zwraca wektor liczby ruchów w kolejnych grach.
 Funkcja wywolujaca funkcje \code{gra()} wielokrotnie przy zadanej strategii i zwracajaca wektor wynikow
 }
 \examples{
-wyniki <- badaj_gre(strategia, 100)
+wyniki <- badaj_gre(strategia_rf, 10)
 
 }
 \author{

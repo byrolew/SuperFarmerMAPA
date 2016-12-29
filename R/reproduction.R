@@ -15,16 +15,11 @@
 #'
 #' @return stock_status Stan stada gracza po rozpatrzeniu rzutow kostkami
 #'
-#' @examples
-#' stock_status <- reproduction(die1_result="krowa", die2_result="krolik", stock_status=c(0,1,0,2,0,0,0),
-#' max_stock=c(60,24,20,12,6,2,4), zawsze_jeden_krolik = FALSE,
-#' co_zjada_wilk = c(1, 1, 0, 1, 1, 0, 0))
-#'
 #' @rdname reproduction
 #'
 #' @author Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
 
-reproduction <- function(die1_result, die2_result, stock_status, max_stock, zawsze_jeden_krolik, co_zjada_wilk){
+reproduction <- function(die1_result, die2_result, stock_status, max_stock, zawsze_jeden_krolik = FALSE, co_zjada_wilk = c(1, 1, 1, 1, 0, 0, 0)){
   if(die1_result != "wilk" && die2_result != "lis"){
     stock_status <- update_stocku(stock_status, max_stock, die1_result, die2_result)
   } else if(die1_result == "wilk" && die2_result != "lis"){

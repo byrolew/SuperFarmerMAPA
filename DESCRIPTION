@@ -1,11 +1,11 @@
 Package: SuperFarmerMAPA
-Title: Strategie do gry w Super Farmera
-Version: 0.0.0.9000
+Title: Super Farmer
+Version: 1.1.4
 Authors@R: c(
     person("Agnieszka", "Ciepielewska", email ="a.ciepielewska@student.uw.edu.pl", role = c("cre")),
-    person("Marek", "Wawreniuk", email ="aaa@aaa.pl", role = c("aut")),
+    person("Marek", "Wawreniuk", role = c("aut")),
     person("Paweł", "Górniak", role = c("aut")))
-Description: TODO
+Description: Zastaw funckji do gry w Super Farmera
 Depends:
     R (>= 3.2.1)
 Imports:

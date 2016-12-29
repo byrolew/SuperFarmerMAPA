@@ -4,21 +4,18 @@
 \alias{moves_generation}
 \title{Generowanie mozliwych rochow}
 \usage{
-moves_generation(stock_status, wiele_na_wiele, max_stock)
+moves_generation(stock_status, max_stock)
 }
 \arguments{
 \item{stock_status}{Aktualny stan stada gracza}
+
+\item{max_stock}{Wektor mowiacy ile zwierzat konkretnego typu znajduje sie w calej grze}
 }
 \value{
 possible_moves Macierz wszystkich mozliwych ruchow
 }
 \description{
 Funkcja \code{moves_generation()} wszytkie mozliwe ruchy gracza przy danym stadzie.
-}
-\examples{
-stan_stada <- c(2,4,1,0,0,0,0)
-stan_stada <- moves_generation(stan_stada)
-
 }
 \author{
 Agnieszka Ciepielewska, Mawek Wawreniuk, Pawel Gorniak

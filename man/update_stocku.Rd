@@ -21,11 +21,6 @@ stock_status Zaktualizowany stan stada gracza
 \description{
 Funkcja pomocnicza wykorzystywana przez funkcje \code{reproduction()} do aktualizowania stanu stada gracza
 }
-\examples{
-stock_status <- update_stocku(stock_status=c(0,1,0,2,0,0,0), 
-max_stock=c(60,24,20,12,6,2,4), die1_result="krowa")
-
-}
 \author{
 Agnieszka Ciepielewska
 }

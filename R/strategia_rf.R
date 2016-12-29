@@ -6,8 +6,6 @@
 #' zeby miec z czego wybierac ruch
 #'
 #' @param stock_status Stan stada gracza przed ruchem
-#' @param wiele_na_wiele Zmienna binarna mowiaca czy gramy w wariant gry, pozwalajacy na
-#' wymienianie wielu zwierzat na wiele innych, domyslnie \code{FALSE}
 #' @param max_stock Wektor mowiacy ile zwierzat konkretnego typu znajduje sie w calej grze
 #' domyslnie c(60, 24, 20, 12, 6, 4, 2)
 #'
@@ -23,10 +21,10 @@
 #'
 #' @export
 
-strategia_rf <- function(stock_status, wiele_na_wiele = FALSE, max_stock = c(60, 24, 20, 12, 6, 4, 2)){
+strategia_rf <- function(stock_status, max_stock = c(60, 24, 20, 12, 6, 4, 2)){
   stock_status <- stock_status[c(5,4,7,3,2,6,1)]
   max_stock <- max_stock[c(5,4,7,3,2,6,1)]
-  possible_moves <- moves_generation(stock_status, wiele_na_wiele, max_stock)
+  possible_moves <- moves_generation(stock_status, max_stock)
   if(!is.null(dim(possible_moves)) && dim(possible_moves)[1] > 0){
     df1 <- matrix(stock_status, nrow = nrow(possible_moves), ncol = 7, byrow = T)
     df1 <- cbind(df1, possible_moves)

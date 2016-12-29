@@ -4,23 +4,20 @@
 \alias{gra}
 \title{Jedna gra w Super Farmera}
 \usage{
-gra(strategia, wiele_na_wiele = FALSE, zwierzeta_w_pudelku = c(60, 24, 20,
-  12, 6, 4, 2), warunki_poczatkowe = c(0, 0, 0, 0, 0, 0, 0),
-  warunek_zwycieztwa = c(1, 1, 1, 1, 1, 0, 0), zawsze_jeden_krolik = FALSE,
-  co_zjada_wilk = c(1, 1, 1, 1, 0, 0, 0))
+gra(strategia, zwierzeta_w_pudelku = c(60, 24, 20, 12, 6, 4, 2),
+  warunki_poczatkowe = c(0, 0, 0, 0, 0, 0, 0), warunek_zwycieztwa = c(1, 1,
+  1, 1, 1, 0, 0), zawsze_jeden_krolik = FALSE, co_zjada_wilk = c(1, 1, 1, 1,
+  0, 0, 0))
 }
 \arguments{
 \item{strategia}{Strategia, ktora ma byc wykorzystywana do grania}
-
-\item{wiele_na_wiele}{Zmienna binarna mowiaca czy gramy w wariant gry, pozwalajacy na
-wymienianie wielu zwierzat na wiele innych, domyslnie \code{FALSE}}
 
 \item{zwierzeta_w_pudelku}{Wektor mowiacy ile zwierzat konkretnego typu znajduje sie w calej grze
 - nie nalezy odejmowac zwierzat, ktore chcemy dac jako warunki poczatkowe, domyslnie c(60, 24, 20, 12, 6, 4, 2)}
 
 \item{warunki_poczatkowe}{Wektor zwierzat, z ktorymi rozpoczynamy gre, domyslnie c(0, 0, 0, 0, 0, 0, 0)}
 
-\item{warunek_zwycieztwa}{Waektor mowiacy ktore zwierzeta i w jakiej ilosci nalezy zdobyc aby wygrac,
+\item{warunek_zwycieztwa}{Wektor mowiacy ktore zwierzeta i w jakiej ilosci nalezy zdobyc aby wygrac,
 domyslnie c(1, 1, 1, 1, 1, 0, 0)}
 
 \item{zawsze_jeden_krolik}{Zmienna binarna mowiaca czy gramy w wariant gry, w ktorym zawsze
@@ -40,8 +37,8 @@ ktora byla potrzebna, aby gracz wygral. Wykorzystuje funkcje: \code{reproduction
 Kolejnosc zwierzat we wszystkich wektorach: 1-krolik, 2-owca, 3-swinia, 4-krowa, 5-kon, 6-maly pies, 7-duzy pies
 }
 \examples{
-wynik <- gra(strategia, wiele_na_wiele = TRUE, zwierzeta_w_pudelku = c(10, 10, 10, 10, 10, 10, 10),
-warunek_zwycieztwa = c(5, 2, 6, 1, 0, 4, 1), zawsze_jeden_krolik = TRUE)
+wynik <- gra(strategia_rf, zwierzeta_w_pudelku = c(100, 100, 100, 100, 100, 100, 100),
+warunek_zwycieztwa = c(42, 1, 1, 1, 1, 1, 1), zawsze_jeden_krolik = TRUE)
 
 }
 \author{

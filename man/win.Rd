@@ -4,7 +4,7 @@
 \alias{win}
 \title{Czy gracz wygral}
 \usage{
-win(stock_status, warunek_zwycieztwa)
+win(stock_status, warunek_zwycieztwa = c(1, 1, 1, 1, 1, 0, 0))
 }
 \arguments{
 \item{stock_status}{Wektor aktualnego stanu stada gracza}

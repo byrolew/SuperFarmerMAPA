@@ -11,7 +11,7 @@
 #'
 #' @author Agnieszka Ciepielewska, Marek Wawreniuk, Pawel Gorniak
 
-win <- function(stock_status, warunek_zwycieztwa){
+win <- function(stock_status, warunek_zwycieztwa = c(1, 1, 1, 1, 1, 0, 0)){
   for(i in 1:7){
     if(warunek_zwycieztwa[i] > stock_status[i]){
       return(FALSE)
