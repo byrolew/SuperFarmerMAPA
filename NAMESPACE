@@ -2,8 +2,9 @@
 
 export(badaj_gre)
 export(gra)
+export(strategia_EV)
+export(strategia_HEV)
+export(strategia_OLC)
+export(strategia_OLC2)
+export(strategia_get_every_animal)
 export(strategia_rf)
-export(strategy_EV)
-export(strategy_HEV)
-export(strategy_OLC)
-export(strategy_get_every_animal)

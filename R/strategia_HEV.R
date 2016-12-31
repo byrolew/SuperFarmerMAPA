@@ -24,9 +24,9 @@ strategia_HEV <- function(stock_status, max_stock = c("krolik" = 60, "owca" = 24
   if (stock_status["kon"] > 1) {
     return (change_horse_on_other_animals(stock_status))
   } else if (stock_status["kon"] == 0 && stock_worth(stock_status) >= 72) {
-    return (buy_the_animal(stock_status, "kon"))
+    return (buy_the_animal(stock_status, "kon", max_stock))
   } else if (stock_worth(stock_status) >= 127) {
-    return (strategia_get_every_animal(stock_status))
+    return (strategia_get_every_animal(stock_status, max_stock))
   } else {
     return (strategia_EV(stock_status, max_stock))
   }

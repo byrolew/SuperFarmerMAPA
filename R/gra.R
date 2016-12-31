@@ -60,8 +60,9 @@ gra <- function(strategia,
     }
     if(environmentName(environment(strategia)) == "SuperFarmerMAPA"){
       stock_status <- strategia(stock_status, max_stock)
+    }else{
+      stock_status <- strategia(stock_status)
     }
-    stock_status <- strategia(stock_status)
   }
   return(turns)
 }

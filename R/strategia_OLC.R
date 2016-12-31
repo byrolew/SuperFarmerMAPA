@@ -30,8 +30,8 @@ strategia_OLC <- function (stock_status, max_stock = c("krolik" = 60, "owca" = 2
   #else strategy_ev
   
   if (stock_status["kon"] >= 2) { return (change_horse_on_other_animals(stock_status))
-  } else if (can_buy_a_horse(stock_status) ) { return (buy_the_animal(stock_status, "kon"))
+  } else if (can_buy_a_horse(stock_status) ) { return (buy_the_animal(stock_status, "kon", max_stock))
   } else if (stock_status["krolik"] >= number_of_rabbits_to_protect && 
-             stock_worth(stock_status) < 127) { return (protect_the_rabbits(stock_status))
+             stock_worth(stock_status) < 127) { return (protect_the_rabbits(stock_status, max_stock))
   } else { return (strategia_HEV(stock_status, max_stock))}
 }

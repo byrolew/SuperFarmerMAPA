@@ -1,8 +1,9 @@
-buy_the_animal <- function(stock_status, animal_name) {
+buy_the_animal <- function(stock_status, animal_name, max_stock) {
   #print(class(stock_status))
   animals_in_necessary_order <- c("kon", "krowa", "duzy_pies", "swinia", "owca", "maly_pies", "krolik")
   stock_status <- stock_status[animals_in_necessary_order]
-  possible_moves <- rbind(moves_generation(stock_status), c(0, 0, 0, 0, 0, 0, 0))
+  max_stock <- max_stock[animals_in_necessary_order]
+  possible_moves <- rbind(moves_generation(stock_status, max_stock), c(0, 0, 0, 0, 0, 0, 0))
   possible_states <- t(t(possible_moves) + stock_status)
   colnames(possible_states) <- animals_in_necessary_order
   #print(as.data.frame(possible_states))
