@@ -4,6 +4,7 @@
 #'
 #' @param strategia Strategia, przy ktorej ma byc badana gra
 #' @param ile Ile razy fukcja ma zagrac w SuperFarmera przy zadanej strategii, domyslnie 10000
+#' @param ... Opcjonalne parametry do funkcji \code{gra}
 #'
 #' @return Funkcja zwraca wektor liczby ruchów w kolejnych grach.
 #'
@@ -16,7 +17,7 @@
 #'
 #' @export
 
-badaj_gre <- function(strategia, ile = 10000){
-  wyniki <- sapply(1:ile, function(x) gra(strategia))
+badaj_gre <- function(strategia, ile = 10000, ...){
+  wyniki <- sapply(1:ile, function(x) gra(strategia, ...))
   return(wyniki)
 }
