@@ -1,5 +1,5 @@
 #' @export
-strategy_get_every_animal <- function(stock_status) {
+strategia_get_every_animal <- function(stock_status) {
   animals_without_dogs <-  c("kon", "krowa", "swinia", "owca", "krolik")
   for (animal_name in animals_without_dogs) {
     if (stock_status[animal_name] == 0) {
