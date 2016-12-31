@@ -30,6 +30,7 @@ Strategie dostêpne w ramach pakietu `SuperFarmerMAPA` to:
 * strategia_EV
 * strategia_HEV
 * strategia_OLC
+* strategia_OLC2
 
 ## Charakterystyka dostêpnych w pakiecie strategii
 
@@ -47,7 +48,7 @@ Taktyka bêd¹ca ma³ym rozszerzeniem poprzedniej strategii. Uwzglêdnia ona to, ¿e 
 
 ### strategy_OLC (One Last Chance)
 
-Jeœli mamy ponad dwa konie, to tak jak poprzednio, jeœli nie to jeœli staæ nas na konia, to równie¿ jak poprzednio. W przeciwnym przypadku jeœli liczba królików przekracza number_of_rabbits_to_protect to chronimy je (czyli jeœli nie ma ma³ego psa, to go kupujemy, jeœli jest, to kupujemy œwiniê, bo to obni¿a liczbê królików (zauwa¿my, ¿e nie ma co trzymaæ wiêcej ni¿ 40 królików, bo przy potencjalnym wyrzuceniu królika, nasz przyrost jest ograniczany przez maksymaln¹ liczbê królików w stadzie g³ównym)), przy czym robimy to w przypadku jeœli nadal nas nie staæ na wygranie gry. Jeœli nas staæ, to wracamy do strategii poprzedniej.
+Jeœli mamy ponad dwa konie, to tak jak poprzednio, jeœli nie to jeœli staæ nas na konia, to równie¿ jak poprzednio. W przeciwnym przypadku jeœli liczba królików przekracza number_of_rabbits_to_protect to chronimy je (czyli jeœli nie ma ma³ego psa, to go kupujemy, jeœli jest, to kupujemy œwiniê, bo to obni¿a liczbê królików (zauwa¿my, ¿e nie ma co trzymaæ wiêcej ni¿ 40 królików, bo przy potencjalnym wyrzuceniu królika, nasz przyrost jest ograniczany przez maksymaln¹ liczbê królików w stadzie g³ównym)), przy czym robimy to w przypadku jeœli nadal nas nie staæ na wygranie gry. Jeœli nas staæ, to wracamy do strategii poprzedniej (dla OLC jest to strategia_HEV, dla OLC2 - strategia_EV).
 
 ## Parametry umo¿liwiaj¹ce modyfikowanie rozgrywki
 

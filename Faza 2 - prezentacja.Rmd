@@ -26,54 +26,51 @@ library(SuperFarmerDA)
 
 ### strategia_rf
 ```{r}
-wynik_SuperFarmerMAPA_strategiarf <- SuperFarmerMAPA::gra(strategia_rf)
-wynik_SuperFarmerMAPA_strategiarf
-
+summary(SuperFarmerMAPA::badaj_gre(strategia_rf,100))
 ```
 ### strategia_EV
-
+```{r}
+summary(SuperFarmerMAPA::badaj_gre(strategia_EV,100))
+```
 ### strategia_HEV
-
+```{r}
+summary(SuperFarmerMAPA::badaj_gre(strategia_HEV,100))
+```
 ### strategia_OLC
+```{r}
+summary(SuperFarmerMAPA::badaj_gre(strategia_OLC,100))
+```
+### strategia_OLC2
+```{r}
+summary(SuperFarmerMAPA::badaj_gre(strategia_OLC2,100))
+```
 
 # Prezentacja działania pakietu SuperFarmerMapa z wykorzystaniem strategii z cudzych pakietów 
 
 ### strategia pochodząca z pakietu `SuperFarmerAGOJZB`
 ```{r}
- wynik_SuperFarmerMAPA_strategia_AGOJZB_pakietAGOJZB <- SuperFarmerMAPA::gra(SuperFarmerAGOJZB::strategia_AGOJZB)
- wynik_SuperFarmerMAPA_strategia_AGOJZB_pakietAGOJZB
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmerAGOJZB::strategia_AGOJZB,100))
 ```
 
 ### strategia postMDiPR pochodząca z pakietu `SuperFarmerMoc`
 ```{r}
- wynik_SuperFarmerMAPA_strategia_postMDiPR_pakietMoc <- SuperFarmerMAPA::gra(SuperFarmerMoc::strategia_postMDiPR)
- wynik_SuperFarmerMAPA_strategia_postMDiPR_pakietMoc
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmerMoc:::strategia_postMDiPR,100))
 ```
-### strategia postMDiPR pochodząca z pakietu `SuperFarmer.SuperPakiet`
+### strategia 1_na_wiele pochodząca z pakietu `SuperFarmer.SuperPakiet`
 ```{r}
- wynik_SuperFarmerMAPA_strategia_1_na_wiele_pakietSuperPakiet <- SuperFarmerMAPA::gra(SuperFarmer.SuperPakiet::strategia_1_na_wiele)
- wynik_SuperFarmerMAPA_strategia_1_na_wiele_pakietSuperPakiet
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmer.SuperPakiet::strategia_1_na_wiele,100))
 ```
 ### strategia postMDiPR pochodząca z pakietu `SuperFarmerADiPR`
 ```{r}
- wynik_SuperFarmerMAPA_strategia_postMDiPR_pakietADiPR <- SuperFarmerMAPA::gra(SuperFarmerADiPR::strategia_postMDiPR)
- wynik_SuperFarmerMAPA_strategia_postMDiPR_pakietADiPR
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmerADiPR::strategia_postMDiPR,100))
 ```
-### strategia postMDiPR pochodząca z pakietu `SuperFarmerRCNK`
+### strategia nk pochodząca z pakietu `SuperFarmerRCNK`
 ```{r}
- wynik_SuperFarmerMAPA_strategia_nk_pakietRCNK <- SuperFarmerMAPA::gra(SuperFarmerRCNK::strategia_nk)
- wynik_SuperFarmerMAPA_strategia_nk_pakietRCNK
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmerRCNK::strategia_nk,100))
 ```
-### strategia postMDiPR pochodząca z pakietu `SuperFarmerDA`
+### strategia strategy_DKA pochodząca z pakietu `SuperFarmerDA`
 ```{r}
- wynik_SuperFarmerMAPA_strategy_DKA_pakietDA <- SuperFarmerMAPA::gra(SuperFarmerDA::strategy_DKA)
- wynik_SuperFarmerMAPA_strategy_DKA_pakietDA
-
+summary(SuperFarmerMAPA::badaj_gre(SuperFarmerDA::strategy_DKA,100))
 ```
 
 # Prezentacja działania strategii pochodzących z pakietu SuperFarmerMapa w cudzych pakietach
@@ -107,7 +104,109 @@ wynik_SuperFarmerRCNK_strategia_rf
 
 
 ### strategia_EV
+#### pakiet `SuperFarmerAGOJZB`
+```{r}
+wynik_SuperFarmerAGOJZB_strategia_EV <- SuperFarmerAGOJZB::gra(SuperFarmerMAPA::strategia_EV)
+wynik_SuperFarmerAGOJZB_strategia_EV
+```
+#### pakiet `SuperFarmerMoc`
+```{r}
+wynik_SuperFarmerMoc_strategia_EV <- SuperFarmerMoc:::gra(SuperFarmerMAPA::strategia_EV)
+wynik_SuperFarmerMoc_strategia_EV
+```
+#### pakiet `SuperFarmer.SuperPakiet`
+```{r}
+wynik_SuperFarmer.SuperPakiet_strategia_EV <- SuperFarmer.SuperPakiet::gra(SuperFarmerMAPA::strategia_EV)
+wynik_SuperFarmer.SuperPakiet_strategia_EV
+```
+#### pakiet `SuperFarmerADiPR`
+```{r}
+wynik_SuperFarmerADiPR_strategia_EV <- SuperFarmerADiPR::gra(SuperFarmerMAPA::strategia_EV)
+wynik_SuperFarmerADiPR_strategia_EV
+```
+#### pakiet `SuperFarmerRCNK`
+```{r}
+wynik_SuperFarmerRCNK_strategia_EV <- SuperFarmerRCNK::gra(SuperFarmerMAPA::strategia_EV)
+wynik_SuperFarmerRCNK_strategia_EV
+```
 
 ### strategia_HEV
+#### pakiet `SuperFarmerAGOJZB`
+```{r}
+wynik_SuperFarmerAGOJZB_strategia_HEV <- SuperFarmerAGOJZB::gra(SuperFarmerMAPA::strategia_HEV)
+wynik_SuperFarmerAGOJZB_strategia_HEV
+```
+#### pakiet `SuperFarmerMoc`
+```{r}
+wynik_SuperFarmerMoc_strategia_HEV <- SuperFarmerMoc:::gra(SuperFarmerMAPA::strategia_HEV)
+wynik_SuperFarmerMoc_strategia_HEV
+```
+#### pakiet `SuperFarmer.SuperPakiet`
+```{r}
+wynik_SuperFarmer.SuperPakiet_strategia_HEV <- SuperFarmer.SuperPakiet::gra(SuperFarmerMAPA::strategia_HEV)
+wynik_SuperFarmer.SuperPakiet_strategia_HEV
+```
+#### pakiet `SuperFarmerADiPR`
+```{r}
+wynik_SuperFarmerADiPR_strategia_HEV <- SuperFarmerADiPR::gra(SuperFarmerMAPA::strategia_HEV)
+wynik_SuperFarmerADiPR_strategia_HEV
+```
+#### pakiet `SuperFarmerRCNK`
+```{r}
+wynik_SuperFarmerRCNK_strategia_HEV <- SuperFarmerRCNK::gra(SuperFarmerMAPA::strategia_HEV)
+wynik_SuperFarmerRCNK_strategia_HEV
+```
 
 ### strategia_OLC
+#### pakiet `SuperFarmerAGOJZB`
+```{r}
+wynik_SuperFarmerAGOJZB_strategia_OLC <- SuperFarmerAGOJZB::gra(SuperFarmerMAPA::strategia_OLC)
+wynik_SuperFarmerAGOJZB_strategia_OLC
+```
+#### pakiet `SuperFarmerMoc`
+```{r}
+wynik_SuperFarmerMoc_strategia_OLC <- SuperFarmerMoc:::gra(SuperFarmerMAPA::strategia_OLC)
+wynik_SuperFarmerMoc_strategia_OLC
+```
+#### pakiet `SuperFarmer.SuperPakiet`
+```{r}
+wynik_SuperFarmer.SuperPakiet_strategia_OLC <- SuperFarmer.SuperPakiet::gra(SuperFarmerMAPA::strategia_OLC)
+wynik_SuperFarmer.SuperPakiet_strategia_OLC
+```
+#### pakiet `SuperFarmerADiPR`
+```{r}
+wynik_SuperFarmerADiPR_strategia_OLC <- SuperFarmerADiPR::gra(SuperFarmerMAPA::strategia_OLC)
+wynik_SuperFarmerADiPR_strategia_OLC
+```
+#### pakiet `SuperFarmerRCNK`
+```{r}
+wynik_SuperFarmerRCNK_strategia_OLC <- SuperFarmerRCNK::gra(SuperFarmerMAPA::strategia_OLC)
+wynik_SuperFarmerRCNK_strategia_OLC
+```
+
+### strategia_OLC2
+#### pakiet `SuperFarmerAGOJZB`
+```{r}
+wynik_SuperFarmerAGOJZB_strategia_OLC2 <- SuperFarmerAGOJZB::gra(SuperFarmerMAPA::strategia_OLC2)
+wynik_SuperFarmerAGOJZB_strategia_OLC2
+```
+#### pakiet `SuperFarmerMoc`
+```{r}
+wynik_SuperFarmerMoc_strategia_OLC2 <- SuperFarmerMoc:::gra(SuperFarmerMAPA::strategia_OLC2)
+wynik_SuperFarmerMoc_strategia_OLC2
+```
+#### pakiet `SuperFarmer.SuperPakiet`
+```{r}
+wynik_SuperFarmer.SuperPakiet_strategia_OLC2 <- SuperFarmer.SuperPakiet::gra(SuperFarmerMAPA::strategia_OLC2)
+wynik_SuperFarmer.SuperPakiet_strategia_OLC2
+```
+#### pakiet `SuperFarmerADiPR`
+```{r}
+wynik_SuperFarmerADiPR_strategia_OLC2 <- SuperFarmerADiPR::gra(SuperFarmerMAPA::strategia_OLC2)
+wynik_SuperFarmerADiPR_strategia_OLC2
+```
+#### pakiet `SuperFarmerRCNK`
+```{r}
+wynik_SuperFarmerRCNK_strategia_OLC2 <- SuperFarmerRCNK::gra(SuperFarmerMAPA::strategia_OLC2)
+wynik_SuperFarmerRCNK_strategia_OLC2
+```
