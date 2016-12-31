@@ -1,3 +1,24 @@
+#' @title Strategia One Last Chance
+#' 
+#' @description Strategia bedaca kolejnym rozszerzeniem strategii \code{strategia_EV} i \code{strategia_HEV}.
+#'  Jesli mamy ponad dwa konie, to tak jak poprzednio, jesli nie to jesli stac nas na konia, to rowniez 
+#'  jak poprzednio. W przeciwnym
+#'   przypadku jesli liczba krolikow przekracza number_of_rabbits_to_protect to chronimy je (czyli jesli 
+#'   nie ma malego psa, to go kupujemy, jesli jest, to kupujemy swinie, bo to obniza liczbe krolikow 
+#'   (zauwazmy, ze nie ma co trzymac wiecej niz 40 krolikow, bo przy potencjalnym wyrzuceniu krolika, 
+#'   nasz przyrost jest ograniczany przez maksymalna liczbe krolikow w stadzie glownym)), przy czym robimy 
+#'   to w przypadku jesli nadal nas nie stac na wygranie gry. Jesli nas stac, to wracamy do strategii 
+#'   poprzedniej (\code{strategia_HEV}).
+#'
+#' @param stock_status Stan stada gracza przed ruchem
+#' @param max_stock Stan stada glownego na poczatku gry.
+#' 
+#' @return Stan stada gracza po ruchu
+#' 
+#' @rdname strategia_OLC
+#' 
+#' @author Marek Wawreniuk
+#'
 #' @export
 
 strategia_OLC <- function (stock_status, max_stock = c("krolik" = 60, "owca" = 24, "swinia" = 20,
