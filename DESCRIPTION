@@ -5,7 +5,7 @@ Authors@R: c(
     person("Agnieszka", "Ciepielewska", email ="a.ciepielewska@student.uw.edu.pl", role = c("cre")),
     person("Marek", "Wawreniuk", role = c("aut")),
     person("Paweł", "Górniak", role = c("aut")))
-Description: Zastaw funckji do gry w Super Farmera
+Description: Zastaw funckji do gry w Super Farmera, link do filmu opisującego pakiet https://www.youtube.com/watch?v=zuVfYu8m6pk
 Depends:
     R (>= 3.2.1)
 Imports:
