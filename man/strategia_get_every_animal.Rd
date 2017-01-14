@@ -4,7 +4,8 @@
 \alias{strategia_get_every_animal}
 \title{Strategia Get Every Animal}
 \usage{
-strategia_get_every_animal(stock_status)
+strategia_get_every_animal(stock_status, max_stock = c(krolik = 60, owca = 24,
+  swinia = 20, krowa = 12, kon = 6, maly_pies = 4, duzy_pies = 2))
 }
 \arguments{
 \item{stock_status}{Stan stada gracza przed ruchem}

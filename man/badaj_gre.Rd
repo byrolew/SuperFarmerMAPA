@@ -4,12 +4,14 @@
 \alias{badaj_gre}
 \title{Badanie gry przy zadanej strategii}
 \usage{
-badaj_gre(strategia, ile = 10000)
+badaj_gre(strategia, ile = 10000, ...)
 }
 \arguments{
 \item{strategia}{Strategia, przy ktorej ma byc badana gra}
 
 \item{ile}{Ile razy fukcja ma zagrac w SuperFarmera przy zadanej strategii, domyslnie 10000}
+
+\item{...}{Opcjonalne parametry do funkcji \code{gra}}
 }
 \value{
 Funkcja zwraca wektor liczby ruchów w kolejnych grach.
