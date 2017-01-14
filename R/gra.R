@@ -39,6 +39,7 @@ gra <- function(strategia,
   die1 <- c("krolik", "krolik", "krolik", "krolik", "krolik", "krolik", "owca", "owca", "owca", "swinia", "krowa", "wilk")
   die2 <- c("krolik", "krolik", "krolik", "krolik", "krolik", "krolik", "owca", "owca", "swinia", "swinia", "kon", "lis")
   animals <- c("krolik", "owca", "swinia", "krowa", "kon", "maly_pies", "duzy_pies")
+  changes_array <- matrix(nrow = 1000, ncol = 7, byrow = T)
   if(zawsze_jeden_krolik && warunki_poczatkowe[1] == 0){
     warunki_poczatkowe[1] <- 1
   }
@@ -47,6 +48,7 @@ gra <- function(strategia,
   max_stock <- zwierzeta_w_pudelku
   names(max_stock) <- animals
   turns <- 0
+  i = 1
   while(!win(stock_status, warunek_zwycieztwa)){
     turns <- turns + 1
     #rzut kostkami
@@ -58,11 +60,15 @@ gra <- function(strategia,
     if(win(stock_status, warunek_zwycieztwa)){
       return(turns)
     }
+    stock_status_tmp <- stock_status
     if(environmentName(environment(strategia)) == "SuperFarmerMAPA"){
       stock_status <- strategia(stock_status, max_stock)
     }else{
       stock_status <- strategia(stock_status)
     }
+    changes_array[i, ] <- (stock_status - stock_status_tmp)
+    i = i+1
   }
-  return(turns)
+  changes_array <- changes_array[complete.cases(changes_array), ]
+  return(list(turns, changes_array))
 }

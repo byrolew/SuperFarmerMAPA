@@ -18,6 +18,19 @@
 #' @export
 
 badaj_gre <- function(strategia, ile = 10000, ...){
-  wyniki <- sapply(1:ile, function(x) gra(strategia, ...))
-  return(wyniki)
+  
+  prices <- c(1, 6, 12, 36, 72, 6, 36)
+  
+  tabela <- matrix(nrow = 7, ncol = 7)
+  wyniki <- list()
+  wyniki <- lapply(1:ile, function(x) gra(strategia, ...))
+  turns <- sapply(wyniki, `[`, 1)
+  changes <- sapply(wyniki, `[`, 2)
+  for(i in 1:ile){
+    changes[[i]] <- t(t(changes[[i]])*prices)
+  }
+  #replicate(ile, )
+  
+  
+  return(changes)
 }
