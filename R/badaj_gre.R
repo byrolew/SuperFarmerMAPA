@@ -20,17 +20,28 @@
 badaj_gre <- function(strategia, ile = 10000, ...){
   
   prices <- c(1, 6, 12, 36, 72, 6, 36)
-  
-  tabela <- matrix(nrow = 7, ncol = 7)
+  exchanges <- matrix(ncol = 7, nrow = 0, byrow = TRUE)
+  tabela <- matrix(0, nrow = 7, ncol = 7)
+  colnames(tabela) = c("kroliki", "owce", "swinie", "krowy", "konie", "male_psy", "duze_psy")
+  rownames(tabela) = c("kroliki", "owce", "swinie", "krowy", "konie", "male_psy", "duze_psy")
   wyniki <- list()
   wyniki <- lapply(1:ile, function(x) gra(strategia, ...))
   turns <- sapply(wyniki, `[`, 1)
   changes <- sapply(wyniki, `[`, 2)
   for(i in 1:ile){
-    changes[[i]] <- t(t(changes[[i]])*prices)
+    exchanges <- rbind(exchanges, changes[[i]])
   }
-  #replicate(ile, )
+  exchanges <- t(t(exchanges)*prices)
+  for(i in 1:nrow(exchanges)){
+    na_co <- which(exchanges[i, ] > 0)
+    co <- which(exchanges[i, ] < 0)
+    if(length(co) == 1){
+      tabela[co, na_co] <- tabela[co, na_co] + exchanges[i, na_co]
+    } else{
+      tabela[co, na_co] <- tabela[co, na_co] - exchanges[i, co]
+    }
+  }
+  tabela <- tabela/prices
   
-  
-  return(changes)
+  return(list(turns, tabela))
 }
