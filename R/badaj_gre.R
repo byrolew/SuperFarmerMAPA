@@ -41,7 +41,6 @@ badaj_gre <- function(strategia, ile = 10000, ...){
       tabela[co, na_co] <- tabela[co, na_co] - exchanges[i, co]
     }
   }
-  tabela <- tabela/prices
-  
+
   return(list(turns, tabela))
 }
