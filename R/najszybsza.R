@@ -1,5 +1,5 @@
 #' Najszybsza strategia - wyniki
 #'
 #' @docType data
-#' @name maxr
+#' @name najszybsza
 NULL
