@@ -14,7 +14,9 @@ Imports:
     png,
     circlize,
     tidyr,
-    dplyr
+    dplyr,
+    ggplot2,
+    grid
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

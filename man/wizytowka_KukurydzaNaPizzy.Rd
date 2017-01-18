@@ -6,4 +6,14 @@
 \usage{
 wizytowka_KukurydzaNaPizzy(strategia)
 }
+\arguments{
+\item{strategia}{Strategia, dla ktorej na byc wygenerowana wizytowka}
+}
+\value{
+Wizytowka.pdf Wizytowka, pokazujaca statystyki na temat strategii oraz jej dzialanie
+}
+\description{
+Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej 
+strategii w formacie pdf
+}
 
