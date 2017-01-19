@@ -9,6 +9,8 @@
 #' 
 #' @rdname wizytowka_KukurydzaNaPizzy
 #' 
+#' @import gridExtra tidyr grid
+#' 
 #' @export
 
 wizytowka_KukurydzaNaPizzy <- function(strategia){
