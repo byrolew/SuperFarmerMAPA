@@ -13,7 +13,7 @@ wizytowka_KukurydzaNaPizzy(strategia)
 Wizytowka.pdf Wizytowka, pokazujaca statystyki na temat strategii oraz jej dzialanie
 }
 \description{
-Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej 
+Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej
 strategii w formacie pdf
 }
 
