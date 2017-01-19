@@ -18,6 +18,7 @@
 #' @rdname strategia_rf
 #'
 #' @author Agnieszka Ciepielewska
+#' 
 #'
 #' @export
 

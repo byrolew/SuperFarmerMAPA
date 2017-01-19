@@ -1,8 +1,8 @@
 #' @title Rysuj gestosc
 #' 
-#' 
 #' @rdname rysyj_gestosc
 #' 
+#' @import ggplot2
 
 rysuj_gestosc <- function(dane){
   dane <- data.frame(dane, najszybsza, najwolniejsza)

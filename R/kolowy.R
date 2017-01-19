@@ -1,6 +1,8 @@
 #' @title Wykres kolowy, pokazujacy zamiany
 #' 
 #' @rdname kolowy
+#' 
+#' @import png circlize dplyr
 
 kolowy <- function(m){
   df1 <- data.frame(matrix(nrow = 7, ncol = 3))
