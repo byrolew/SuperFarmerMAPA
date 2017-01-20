@@ -4,6 +4,6 @@
 \alias{staty}
 \title{Zrob statystyki}
 \usage{
-staty(dane)
+staty(dane, nazwa)
 }
 

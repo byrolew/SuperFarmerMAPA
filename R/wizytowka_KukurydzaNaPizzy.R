@@ -42,7 +42,7 @@ wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000){
                c(6,6))
 
   tytul <- grid::textGrob(gsub("::","\n",deparse(substitute(strategia))), gp=grid::gpar(fontsize=30))
-  p1 <-gridExtra::tableGrob(staty(dane),theme = tt1)
+  p1 <-gridExtra::tableGrob(staty(dane, strsplit(deparse(substitute(strategia)),"::")[[1]][2]),theme = tt1)
   p2 <- rysuj_gestosc(dane)
   #tutaj zapisujemy plik
   png('rplot.png',width = 1280, height = 1280, res = 200)
