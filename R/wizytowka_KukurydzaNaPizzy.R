@@ -17,7 +17,8 @@
 wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000){
 
   tt1 <- gridExtra::ttheme_default(
-    core = list(bg_params=list(fill=c("aliceblue", "pink"))),
+    core = list(fg_params = list(col="white"),
+                bg_params=list(fill=c("firebrick1", "gray7", "green3"))),
     colhead = list(fg_params=list(col="white"),
                    bg_params=list(fill="cadetblue3"))
   )
