@@ -4,16 +4,18 @@
 \alias{wizytowka_KukurydzaNaPizzy}
 \title{Wizytowka}
 \usage{
-wizytowka_KukurydzaNaPizzy(strategia)
+wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000)
 }
 \arguments{
 \item{strategia}{Strategia, dla ktorej na byc wygenerowana wizytowka}
+
+\item{powtorz}{Liczba powtorzen gier}
 }
 \value{
 Wizytowka.pdf Wizytowka, pokazujaca statystyki na temat strategii oraz jej dzialanie
 }
 \description{
-Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej 
+Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej
 strategii w formacie pdf
 }
 
