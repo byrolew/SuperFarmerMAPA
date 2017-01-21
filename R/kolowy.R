@@ -1,7 +1,7 @@
 #' @title Wykres kolowy, pokazujacy zamiany
-#' 
+#'
 #' @rdname kolowy
-#' 
+#'
 #' @import png circlize dplyr
 
 kolowy <- function(m){
@@ -14,21 +14,21 @@ kolowy <- function(m){
   df1[6,] <- c(6, "150,150,255", "male_psy")
   df1[7,] <- c(7, "50,50,255", "duze_psy")
   colnames(df1) <- c("order", "rgb", "gatunek")
-  
+
   #sort regions and create colours
-  df1 <- df1 %>% arrange(order) %>% separate(rgb, c("r","g","b")) %>% 
+  df1 <- df1 %>% arrange(order) %>% separate(rgb, c("r","g","b")) %>%
     mutate(col = rgb(r, g, b, max=255), max = rowSums(m)+colSums(m))
-  
+
   #plot using chordDiagram
   circos.clear()
   par(mar = rep(0, 4), cex=0.9)
   circos.par(start.degree = 90, gap.degree = 2)
-  chordDiagram(x = m, directional = 1, order = df1$region, 
-               grid.col = df1$col, annotationTrack = "grid", 
+  chordDiagram(x = m, directional = 1, order = df1$region,
+               grid.col = df1$col, annotationTrack = "grid",
                transparency = 0.25, annotationTrackHeight = c(0.05),
                diffHeight  = 0.00, preAllocateTracks = list(list(track.height = 0.05),
                                                             list(track.height = 0.05)))
-  
+
   #add in labels and axis
   circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
     xlim = get.cell.meta.data("xlim")
