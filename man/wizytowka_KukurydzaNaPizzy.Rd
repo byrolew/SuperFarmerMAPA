@@ -12,7 +12,7 @@ wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000)
 \item{powtorz}{Liczba powtorzen gier}
 }
 \value{
-KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na 
+KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na
 temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
 pakietu
 }

@@ -6,12 +6,12 @@
 #' @param strategia Strategia, dla ktorej na byc wygenerowana wizytowka
 #' @param powtorz Liczba powtorzen gier
 #'
-#' @return KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na 
+#' @return KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na
 #' temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
 #' pakietu
 #'
 #' @rdname wizytowka_KukurydzaNaPizzy
-#' 
+#'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import gridExtra tidyr grid
@@ -34,7 +34,7 @@ wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000){
                c(7,6))
 
   tytul <- grid::textGrob(gsub("::","\n",deparse(substitute(strategia))), gp=grid::gpar(fontsize=30))
-  if("::" %in% deparse(substitute(strategia))){
+  if(grepl("::",deparse(substitute(strategia)))){
     nazwa <- strsplit(deparse(substitute(strategia)),"::")[[1]][2]
   } else {
     nazwa <- deparse(substitute(strategia))
@@ -46,22 +46,22 @@ wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000){
   kolowy(m)
   dev.off()
   # tu go wczytujemy
-  p3_tytul <- grid::textGrob("Przeplyw wartosci w krolikach w wymianach", gp=grid::gpar(fontsize=13), just = "center")
+  p3_tytul <- grid::textGrob("Przepływ wartości w królikach w wymianach", gp=grid::gpar(fontsize=13), just = "center")
    p3 <- rasterGrob(readPNG('rplot.png'))
   #######TO zapisywanie i wczytywanie pliku jest baaaaaaaaaaaaardzo nieeleganckie!!!!!
-  p3_opis <- grid::textGrob("Wykres wizualizuje wymiany dokonywane przez strategie.\n
-Jednostka wykresu jest wartosc jednego krolika.\n
-Dlugosc wycinka odpowiadajacego zwierzeciu pokazuje udzial jego wartosci w we wszystkich\n
-wymianach (caly okrag).\n
-Przeplywy miedzy wycinkami pokazuja, na co i jak wartosciowe byly wymiany zwierzecia\n
+  p3_opis <- grid::textGrob("Wykres wizualizuje wymiany dokonywane przez strategię.\n
+Jednostką wykresu jest wartość jednego krolika.\n
+Długość wycinka odpowiadającego zwięrzeciu pokazuje udział jego wartości\n
+we wszystkich wymianach (cały okrąg).\n
+Przepływy między wycinkami pokazują, na co i jak wartościowe były wymiany zwierzęcia\n
 o odpowiednim kolorze.",
                             gp=grid::gpar(fontsize=10, lineheight	= 0.5),
                             x = unit(0, "npc"),
                             y = unit(0.7, "npc"),
                             just = "left")
-  p_podpis <- grid::textGrob("grupa KukurydzaNaPizzy", gp=grid::gpar(fontsize=8), just = "left")
+  p_podpis <- grid::textGrob("grupa KukurydzaNaPizzy: Agnieszka Ciepielewska, Alicja Gosiewska, Hanna Kranas", gp=grid::gpar(fontsize=10), just = "center")
   nazwa_pliku <- paste0("KukurydzaNaPizzy_Wizytowka_",gsub('\"',"",gsub("::","_",gsub("\\.","",deparse(substitute(strategia))))),".pdf")
-  pdf(paste0("inst/",nazwa_pliku),width=11.69, height=8.27)
+  Cairo::CairoPDF(paste0("inst/",nazwa_pliku),width=11.69, height=8.27)
   grid.arrange(tytul,p3,p2,p1,p3_tytul,p3_opis,p_podpis,layout_matrix = lay)
   dev.off()
 }

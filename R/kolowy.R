@@ -3,20 +3,22 @@
 #' @description Generuje wykres kolowy wymian
 #'
 #' @rdname kolowy
-#' 
+#'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import png circlize dplyr
 
 kolowy <- function(m){
+  colnames(m) = c("króliki","owce","świnie","krowy", "konie", "małe psy", "duże psy")
+  rownames(m) = c("króliki","owce","świnie","krowy", "konie", "małe psy", "duże psy")
   df1 <- data.frame(matrix(nrow = 7, ncol = 3))
-  df1[1, ] <- c(1, "153, 255, 51", "kroliki")
+  df1[1, ] <- c(1, "153, 255, 51", "króliki")
   df1[2,] <- c(2, "255, 255, 102", "owce")
-  df1[3,] <- c(3, "255, 102, 204", "swinie")
+  df1[3,] <- c(3, "255, 102, 204", "świnie")
   df1[4,] <- c(4, "255,100,0", "krowy")
   df1[5,] <- c(5, "123,52,21", "konie")
-  df1[6,] <- c(6, "150,150,255", "male_psy")
-  df1[7,] <- c(7, "50,50,255", "duze_psy")
+  df1[6,] <- c(6, "150,150,255", "małe psy")
+  df1[7,] <- c(7, "50,50,255", "duże psy")
   colnames(df1) <- c("order", "rgb", "gatunek")
 
   #sort regions and create colours

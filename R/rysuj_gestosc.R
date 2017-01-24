@@ -1,9 +1,9 @@
 #' @title Rysowanie wykresu gestosci
-#' 
+#'
 #' @description Funkcja rysuje wykres gestosci wynikow gry w Super Farmera
 #'
 #' @rdname rysyj_gestosc
-#' 
+#'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import ggplot2
@@ -17,9 +17,10 @@ rysuj_gestosc <- function(dane){
     ggplot2::theme_bw()+
     ggplot2::xlab("Czas trwania gry")+
     ggplot2::xlim(c(0,150))+
-    ggplot2::ylab("Gestosc")+
-    ggplot2::labs(title="Porownanie gestosci czasu gry")+
-    guides(fill=FALSE,coulour = FALSE)
+    ggplot2::ylab("Gęstość")+
+    ggplot2::labs(title="Porównanie gęstości czasu gry")+
+    guides(fill=FALSE,coulour = FALSE)+
+    theme(panel.border = element_blank())
     #ggplot2::scale_colour_manual(name = 'Strategia', values =c('badana'='gray7','najszybsza'='firebrick1','najwolniejsza'='green3'))
   return(p)
 }
