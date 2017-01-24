@@ -4,12 +4,14 @@
 \alias{wizytowka_KukurydzaNaPizzy}
 \title{Wizytowka}
 \usage{
-wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000)
+wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000, sciezka)
 }
 \arguments{
 \item{strategia}{Strategia, dla ktorej na byc wygenerowana wizytowka}
 
 \item{powtorz}{Liczba powtorzen gier}
+
+\item{sciezka}{Sciezka do pliku, gdzie ma sie zapisac wizytowka}
 }
 \value{
 KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na
