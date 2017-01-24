@@ -15,7 +15,7 @@
 #'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
-#' @import gridExtra tidyr grid grDevices
+#' @import gridExtra tidyr grid Cairo
 #'
 #' @export
 
@@ -62,7 +62,7 @@ o odpowiednim kolorze.",
                             just = "left")
   p_podpis <- grid::textGrob("grupa KukurydzaNaPizzy: Agnieszka Ciepielewska, Alicja Gosiewska, Hanna Kranas", gp=grid::gpar(fontsize=10), just = "center")
   nazwa_pliku <- paste0("KukurydzaNaPizzy_Wizytowka_",gsub('\"',"",gsub("::","_",gsub("\\.","",deparse(substitute(strategia))))),".pdf")
-  cairo_pdf(paste0("inst/",nazwa_pliku),width=11.69, height=8.27)
+  Cairo::CairoPDF(paste0("inst/",nazwa_pliku),width=11.69, height=8.27)
   grid.arrange(tytul,p3,p2,p1,p3_tytul,p3_opis,p_podpis,layout_matrix = lay)
   dev.off()
 }
