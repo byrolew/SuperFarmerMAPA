@@ -16,7 +16,8 @@ Imports:
     tidyr,
     dplyr,
     ggplot2,
-    grid
+    grid,
+    Cairo
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

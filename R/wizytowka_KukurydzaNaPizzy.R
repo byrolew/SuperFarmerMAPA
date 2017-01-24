@@ -5,6 +5,7 @@
 #'
 #' @param strategia Strategia, dla ktorej na byc wygenerowana wizytowka
 #' @param powtorz Liczba powtorzen gier
+#' @param sciezka Sciezka do pliku, gdzie ma sie zapisac wizytowka
 #'
 #' @return KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na
 #' temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
@@ -14,11 +15,11 @@
 #'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
-#' @import gridExtra tidyr grid
+#' @import gridExtra tidyr grid Cairo
 #'
 #' @export
 
-wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000){
+wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000, sciezka){
 
   lista <- SuperFarmerMAPA::badaj_gre(strategia,powtorz)
 
