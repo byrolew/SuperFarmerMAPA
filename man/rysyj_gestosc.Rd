@@ -2,8 +2,14 @@
 % Please edit documentation in R/rysuj_gestosc.R
 \name{rysuj_gestosc}
 \alias{rysuj_gestosc}
-\title{Rysuj gestosc}
+\title{Rysowanie wykresu gestosci}
 \usage{
 rysuj_gestosc(dane)
+}
+\description{
+Funkcja rysuje wykres gestosci wynikow gry w Super Farmera
+}
+\author{
+Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 }
 

@@ -1,6 +1,13 @@
-#' @title Zrob statystyki
+#' @title Statystyki strategii
+#'
+#' @description Funkcja generuje podstawowe statystyki dla wybranej strategii
+#' 
+#' @param dane Wektor dlugosci gier, z ktorego generujemy statystyki
+#' @param nazwa Nazwa strategii, dla ktorej generujemy statystyki
 #'
 #' @rdname staty
+#' 
+#' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 
 staty <- function(dane, nazwa){
   statdane <-unclass(summary(dane))

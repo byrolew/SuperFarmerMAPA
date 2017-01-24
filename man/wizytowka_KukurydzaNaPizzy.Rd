@@ -12,10 +12,15 @@ wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000)
 \item{powtorz}{Liczba powtorzen gier}
 }
 \value{
-Wizytowka.pdf Wizytowka, pokazujaca statystyki na temat strategii oraz jej dzialanie
+KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na 
+temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
+pakietu
 }
 \description{
 Funkcja \code{wizytowka_KukurydzaNaPizzy} generuje wizytowke wybranej
 strategii w formacie pdf
+}
+\author{
+Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 }
 

@@ -1,6 +1,10 @@
-#' @title Rysuj gestosc
+#' @title Rysowanie wykresu gestosci
+#' 
+#' @description Funkcja rysuje wykres gestosci wynikow gry w Super Farmera
 #'
 #' @rdname rysyj_gestosc
+#' 
+#' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import ggplot2
 

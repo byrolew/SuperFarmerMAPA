@@ -6,4 +6,7 @@
 \usage{
 kolowy(m)
 }
+\author{
+Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
+}
 

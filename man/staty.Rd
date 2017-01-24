@@ -2,8 +2,19 @@
 % Please edit documentation in R/staty.R
 \name{staty}
 \alias{staty}
-\title{Zrob statystyki}
+\title{Statystyki strategii}
 \usage{
 staty(dane, nazwa)
+}
+\arguments{
+\item{dane}{Wektor dlugosci gier, z ktorego generujemy statystyki}
+
+\item{nazwa}{Nazwa strategii, dla ktorej generujemy statystyki}
+}
+\description{
+Funkcja generuje podstawowe statystyki dla wybranej strategii
+}
+\author{
+Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 }
 

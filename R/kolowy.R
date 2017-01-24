@@ -1,6 +1,9 @@
 #' @title Wykres kolowy, pokazujacy zamiany
 #'
+#'
 #' @rdname kolowy
+#' 
+#' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import png circlize dplyr
 

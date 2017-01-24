@@ -6,9 +6,13 @@
 #' @param strategia Strategia, dla ktorej na byc wygenerowana wizytowka
 #' @param powtorz Liczba powtorzen gier
 #'
-#' @return Wizytowka.pdf Wizytowka, pokazujaca statystyki na temat strategii oraz jej dzialanie
+#' @return KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na 
+#' temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
+#' pakietu
 #'
 #' @rdname wizytowka_KukurydzaNaPizzy
+#' 
+#' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
 #' @import gridExtra tidyr grid
 #'
