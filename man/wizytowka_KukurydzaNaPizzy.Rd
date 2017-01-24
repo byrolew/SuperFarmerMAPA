@@ -4,7 +4,7 @@
 \alias{wizytowka_KukurydzaNaPizzy}
 \title{Wizytowka}
 \usage{
-wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000, sciezka)
+wizytowka_KukurydzaNaPizzy(strategia, powtorz = 10000, sciezka = NULL)
 }
 \arguments{
 \item{strategia}{Strategia, dla ktorej na byc wygenerowana wizytowka}

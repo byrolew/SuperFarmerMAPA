@@ -4,8 +4,8 @@ Version: 1.3.2
 Authors@R: c(
     person("Agnieszka", "Ciepielewska", email ="a.ciepielewska@student.uw.edu.pl", role = c("cre")),
     person("Marek", "Wawreniuk", role = c("aut")),
-    person("Pawe?", "G?rniak", role = c("aut")))
-Description: Zastaw funckji do gry w Super Farmera, link do filmu opisuj?cego pakiet https://www.youtube.com/watch?v=zuVfYu8m6pk
+    person("Pawel", "Gorniak", role = c("aut")))
+Description: Zastaw funckji do gry w Super Farmera, link do filmu opisujacego pakiet https://www.youtube.com/watch?v=zuVfYu8m6pk
 Depends:
     R (>= 3.2.1)
 Imports:
@@ -17,7 +17,6 @@ Imports:
     dplyr,
     ggplot2,
     grid,
-    Cairo
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
