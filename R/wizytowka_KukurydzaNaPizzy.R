@@ -15,7 +15,7 @@
 #'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
-#' @import gridExtra tidyr grid
+#' @import gridExtra tidyr grid grDevices
 #'
 #' @export
 
