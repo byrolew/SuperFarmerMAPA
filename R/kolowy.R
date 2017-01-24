@@ -1,5 +1,6 @@
 #' @title Wykres kolowy, pokazujacy zamiany
 #'
+#' @description Generuje wykres kolowy wymian
 #'
 #' @rdname kolowy
 #' 

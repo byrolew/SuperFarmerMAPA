@@ -6,6 +6,9 @@
 \usage{
 kolowy(m)
 }
+\description{
+Generuje wykres kolowy wymian
+}
 \author{
 Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 }
