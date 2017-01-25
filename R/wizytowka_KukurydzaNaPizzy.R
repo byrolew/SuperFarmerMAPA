@@ -4,10 +4,10 @@
 #' strategii w formacie pdf
 #'
 #' @param strategia Strategia, dla ktorej na byc wygenerowana wizytowka
-#' @param powtorz Liczba powtorzen gier
 #' @param sciezka Sciezka do pliku, gdzie ma sie zapisac wizytowka
+#' @param powtorz Liczba powtorzen gier
 #'
-#' @return KukurydzaNaPizzy_Wizytowka_strategia.pdf Wizytowka, pokazujaca statystyki na
+#' @return wizytowka.pdf Wizytowka, pokazujaca statystyki na
 #' temat strategii oraz jej dzialanie. Zostaje ona zapisana w folderze \code{inst} wewnatrz
 #' pakietu
 #'
@@ -15,11 +15,11 @@
 #'
 #' @author Hanna Kranas, Alicja Gosiewska, Agnieszka Ciepielewska
 #'
-#' @import gridExtra tidyr grid Cairo
+#' @import gridExtra tidyr grid
 #'
 #' @export
 
-wizytowka_KukurydzaNaPizzy <- function(strategia,powtorz=10000, sciezka=NULL){
+wizytowka_KukurydzaNaPizzy <- function(strategia, sciezka, powtorz=10000){
 
   lista <- SuperFarmerMAPA::badaj_gre(strategia,powtorz)
 
@@ -61,8 +61,8 @@ o odpowiednim kolorze.",
                             y = unit(0.7, "npc"),
                             just = "left")
   p_podpis <- grid::textGrob("grupa KukurydzaNaPizzy: Agnieszka Ciepielewska, Alicja Gosiewska, Hanna Kranas", gp=grid::gpar(fontsize=10), just = "center")
-  nazwa_pliku <- paste0("KukurydzaNaPizzy_Wizytowka_",gsub('\"',"",gsub("::","_",gsub("\\.","",deparse(substitute(strategia))))),".pdf")
-  pdf(paste0("inst/",nazwa_pliku),width=11.69, height=8.27)
+  #nazwa_pliku <- paste0("KukurydzaNaPizzy_Wizytowka_",gsub('\"',"",gsub("::","_",gsub("\\.","",deparse(substitute(strategia))))),".pdf")
+  pdf(sciezka, width=11.69, height=8.27)
   grid.arrange(tytul,p3,p2,p1,p3_tytul,p3_opis,p_podpis,layout_matrix = lay)
   dev.off()
 }
