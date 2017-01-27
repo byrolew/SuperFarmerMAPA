@@ -49,7 +49,6 @@ wizytowka_KukurydzaNaPizzy <- function(strategia, sciezka, powtorz=10000){
   # tu go wczytujemy
   p3_tytul <- grid::textGrob("Przeplyw wartosci w krolikach w wymianach", gp=grid::gpar(fontsize=13), just = "center")
    p3 <- rasterGrob(readPNG('rplot.png'))
-  #######TO zapisywanie i wczytywanie pliku jest baaaaaaaaaaaaardzo nieeleganckie!!!!!
   p3_opis <- grid::textGrob("Wykres wizualizuje wymiany dokonywane przez strategie.\n
 Jednostka wykresu jest wartosc jednego krolika.\n
 Dlugosc wycinka odpowiadajacego zwierzeciu pokazuje udzial jego wartosci\n
